@@ -1,0 +1,348 @@
+/* RMSmart Redirects - Modern Admin CSS */
+:root {
+    --rmsmart-primary: #004e9a;
+    /* Deep Royal Blue */
+    --rmsmart-secondary: #accf02 !important;
+    /* Vibrant Green */
+    --rmsmart-pending: #fd7e14;
+    /* Orange */
+    --rmsmart-bg-card: #ffffff;
+    --rmsmart-bg-body: #f0f2f5;
+    --rmsmart-text-dark: #2c3338;
+    --rmsmart-text-gray: #646970;
+    --rmsmart-border: #dcdcde;
+    --rmsmart-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.rmsmart-wrap {
+    margin: 20px 40px 0 40px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* --- HEADER --- */
+.rmsmart-header {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: var(--rmsmart-shadow);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    border-bottom: 3px solid var(--rmsmart-secondary);
+}
+
+.rmsmart-logo {
+    height: 50px;
+    width: auto;
+}
+
+.rmsmart-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--rmsmart-primary);
+    margin: 0;
+}
+
+/* --- TABS --- */
+.rmsmart-tabs {
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--rmsmart-border);
+}
+
+.rmsmart-tab {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--rmsmart-text-gray);
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    transition: all 0.2s;
+}
+
+.rmsmart-tab.active {
+    background: #fff;
+    border-color: var(--rmsmart-border);
+    border-bottom-color: #fff;
+    color: var(--rmsmart-primary);
+    margin-bottom: -1px;
+    font-weight: 600;
+}
+
+.rmsmart-tab:hover:not(.active) {
+    color: var(--rmsmart-primary);
+    background: #f6f7f7;
+}
+
+/* --- STATS CARDS --- */
+.rmsmart-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.rmsmart-stat-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--rmsmart-shadow);
+    border-left: 4px solid var(--rmsmart-primary);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.rmsmart-stat-card.green {
+    border-left-color: var(--rmsmart-secondary);
+}
+
+.rmsmart-stat-card.orange {
+    border-left-color: var(--rmsmart-pending);
+}
+
+.rmsmart-stat-icon {
+    font-size: 32px;
+    opacity: 0.8;
+}
+
+.rmsmart-stat-info h4 {
+    margin: 0;
+    font-size: 13px;
+    color: var(--rmsmart-text-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.rmsmart-stat-info .count {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--rmsmart-text-dark);
+    line-height: 1.2;
+}
+
+/* --- MAIN CARD --- */
+.rmsmart-card {
+    background: #fff;
+    border: 1px solid var(--rmsmart-border);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: var(--rmsmart-shadow);
+    margin-bottom: 20px;
+}
+
+.rmsmart-card h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+    color: var(--rmsmart-primary);
+}
+
+/* --- TABLE STYLES --- */
+.wp-list-table {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.wp-list-table thead th {
+    font-weight: 600;
+    color: var(--rmsmart-text-dark);
+    border-bottom: 2px solid #eee !important;
+}
+
+.wp-list-table td {
+    vertical-align: middle;
+    padding: 12px 10px !important;
+}
+
+/* --- BADGES --- */
+.rmsmart-badge {
+    display: inline-block !important;
+    padding: 4px 10px !important;
+    border-radius: 12px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    line-height: 1.4 !important;
+    box-shadow: none !important;
+}
+
+.rmsmart-badge.active {
+    background: #e6ffed !important;
+    color: #46b450 !important;
+    border: 1px solid #b7ebc7 !important;
+}
+
+.rmsmart-badge.pending {
+    background: #fff8e6 !important;
+    color: #b7791f !important;
+    border: 1px solid #fbd38d !important;
+}
+
+.rmsmart-badge.redirect-301 {
+    background: #e3f2fd !important;
+    color: #0c5460 !important;
+}
+
+.rmsmart-badge.redirect-302 {
+    background: #fff3cd !important;
+    color: #856404 !important;
+}
+
+/* --- BUTTONS --- */
+.rmsmart-wrap .button,
+.rmsmart-wrap .button-primary,
+.rmsmart-wrap .button-secondary,
+.rmsmart-wrap input[type="submit"],
+.button-primary.rmsmart-btn {
+    background: #000000 !important;
+    border-color: #000000 !important;
+    color: #ffffff !important;
+    text-shadow: none !important;
+    transition: 0.2s;
+    box-shadow: none !important;
+}
+
+.rmsmart-wrap .button:hover,
+.rmsmart-wrap .button-primary:hover,
+.rmsmart-wrap .button-secondary:hover,
+.rmsmart-wrap input[type="submit"]:hover,
+.button-primary.rmsmart-btn:hover {
+    background: #333333 !important;
+    border-color: #333333 !important;
+    color: #ffffff !important;
+}
+
+/* --- TOOLS GRID --- */
+.rmsmart-tools-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* --- AJAX LOADING STATES --- */
+.rmsmart-spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: rmsmart-spin 0.6s linear infinite;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+@keyframes rmsmart-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* --- TOAST NOTIFICATIONS --- */
+.rmsmart-toast {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 999999;
+    opacity: 0;
+    transform: translateX(400px);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--rmsmart-primary);
+}
+
+.rmsmart-toast.rmsmart-toast-success {
+    border-left-color: var(--rmsmart-secondary);
+    color: var(--rmsmart-secondary);
+}
+
+.rmsmart-toast.rmsmart-toast-error {
+    border-left-color: #d63638;
+    color: #d63638;
+}
+
+.rmsmart-toast.rmsmart-toast-show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* --- DASHBOARD GRID --- */
+.rmsmart-dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 960px) {
+    .rmsmart-dashboard-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* --- PRO BADGE --- */
+/* High specificity to prevent theme overrides */
+.rmsmart-pro-badge,
+.rmsmart-wrap .rmsmart-pro-badge,
+.rmsmart-tabs .rmsmart-pro-badge,
+.rmsmart-tab .rmsmart-pro-badge,
+.nav-tab .rmsmart-pro-badge,
+.nav-tab-wrapper .rmsmart-pro-badge,
+a .rmsmart-pro-badge,
+span.rmsmart-pro-badge,
+.rmsmart-card .rmsmart-pro-badge,
+.rmsmart-card h3 .rmsmart-pro-badge,
+.wp-admin .rmsmart-pro-badge {
+    background: #accf02 !important;
+    background-color: #accf02 !important;
+    color: #000000 !important;
+    padding: 2px 6px !important;
+    border-radius: 3px !important;
+    font-size: 9px !important;
+    vertical-align: middle !important;
+    margin-left: 4px !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    display: inline-block !important;
+    line-height: 1.4 !important;
+    border: none !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    font-style: normal !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* --- BUTTON SPACING --- */
+.rmsmart-wrap .button+.button,
+.rmsmart-wrap .button-small+.button-small,
+.rmsmart-wrap input[type="submit"]+input[type="submit"] {
+    margin-left: 0px !important;
+}
+
+/* Action buttons in table cells */
+.rmsmart-wrap td .button,
+.rmsmart-wrap td .button-small {
+    margin: 2px 4px 2px 0 !important;
+}
+
+/* Stacked buttons (like Fix Redirect + Edit Page) */
+.rmsmart-action-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+}
+
+.rmsmart-action-buttons .button {
+    margin: 0 !important;
+    text-align: center !important;
+}
